@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meatodoor</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav class="navbar nav1 navbar-expand-lg p">
+            <div class="container">
+                <img src="https://meatodoor.com/assets/img/meat-logo.png" alt="" class="brand-logo">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="What are you looking for..."
+                        aria-label="Search" size="40">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <a class="nav-link" href="#">
+                            <li class="nav-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-moon" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                                </svg>
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav2 navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor"
+                                class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                            </svg>
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="16"
+                                fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                            </svg>
+                            Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16"
+                                fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg>
+                            Buyer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16"
+                                fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                            </svg>
+                            Seller</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container heading">
+            <div class=" center justify-content-center">
+                <h1>
+                    Mena's No.1 Market
+                </h1>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-2">
+                    <div class="item ">
+                        <ul class="list-group bg-light">
+                            <h5 class="center">
+                                Categories
+                            </h5>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Poultry</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Beef</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Veel</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Lamb</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Mutton</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Premium Black Angus</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Premium Wagyu</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Processed</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Sea Food</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Potatoe</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Vegetable</a></li>
+                            <li class="list-group-item"><a href="#" class="nav-link"> Vegan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <img src="image.png" alt="" width="720" height="510">
+                </div>
+                <div class="col-3 bg-light">
+                    <h5 class="center">
+                        Deals
+                    </h5>
+                    <img src="image2.png" alt="" width="300" height="150">
+                    <img src="image3.png" alt="" width="300">
+                    <img src="image4.png" alt="" width="300">
+                </div>
+            </div>
+        </div>
+        <div class="container  mt-5 ">
+            <div class="row justify-content-between quoatation ">
+                <div class="col-7 text-light pt-4">
+                    <h2>Try our request for quoatation feature to save time and cost</h2>
+                    <ul class=" pt-5 text-light">
+                        <li class="pt-2">Submit quoatation in 2 clicks</li>
+                        <li class="pt-2">Get multiplte quoatation from verified sellers</li>
+                        <li class="pt-2">Compare and select the best quote</li>
+                        <li class="pt-2">Sellers and check all the RFQs</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary mb-3">RFQ MARKETPLACE</button>
+                </div>
+                <div class="col-3 bg-dark text-light pt-4">
+                    <h2>Request for quoatation</h2>
+                    <p>Get your quote now!</p>
+                    <form role="search">
+                        <input class="form-control me-2 mb-3" type="search" placeholder="Search or specify product name"
+                            aria-label="Search" size="40">
+                        <input class="form-control me-2 mb-3" type="search" placeholder="Quantity" aria-label="Search"
+                            size="40">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 show-off">
+            <div class="row justify-content-evenly">
+                <div class="col-3">
+                    <h4 class="pb-3">B2B Marketplace for Business</h4>
+                    <button class="btn btn-dark" type="button">LEARN MORE </button>
+                </div>
+                <div class="col-3 bg-light">
+                    <div class="row justify-content-center align-items-center ">
+                        <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                fill="currentColor" class="bi bi-patch-check " viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                <path
+                                    d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z" />
+                            </svg></div>
+                        <div class="col pt-4">
+                            <h4>Lorem ipsum dolor sit </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 bg-light">
+                    <div class="row justify-content-center align-items-center ">
+                        <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                                <path
+                                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                            </svg></div>
+                        <div class="col pt-4">
+                            <h4>Lorem ipsum dolor sit </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 bg-light">
+                    <div class="row justify-content-center align-items-center ">
+                        <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                            </svg></div>
+                        <div class="col pt-4">
+                            <h4>Lorem ipsum dolor sit </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo opti
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h3>Recommended Suppliers</h3>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <img src="image6.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="image7.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="image8.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h3>Featured Brands</h3>
+            <div class="row mt-3 justify-content-center">
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="demo">
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 background">
+            <div class=" center text-light pt-5">
+                <h2>Ready to grow your business globally?</h2>
+                <button class="btn btn-primary" type="button">Learn More</button>
+            </div>
+        </div>
+        <div class="container mt-5 product">
+            <h3>Explore Categories</h3>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <a href=""><img src="image9.png" alt=""> </a>
+                    <h4 class="center">Beef</h4>
+                </div>
+                <div class="col-3">
+                    <a href=""><img src="image10.png" alt=""></a>
+                    <h4 class="center">Poultry</h4>
+                </div>
+                <div class="col-3">
+                    <a href=""><img src="image11.png" alt=""></a>
+                    <h4 class="center"> Vegetables</h4>
+                </div>
+                <div class="col-3">
+                    <a href=""><img src="image12.png" alt=""></a>
+                    <h4 class="center">Potatoes</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 product ">
+            <h3>Select Suppliers from Country</h3>
+            <div class="row mt-3">
+                <div class="col">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAflBMVEX///+8AC23AAC7ACe7ACm4ABW5ABu4ABC6ACO5ABm7ACi4ABO6ACL46u3sx83NYXG3AAfnvcL14OTiqLH78fPKVGbEOE/9+PnGQFbjrbX35OjnuL/x09jsxszpv8XfoarSc4HXhZHAHj3CK0bbkJvQanm/DzbUeYbemqS/FjiKuKh1AAADpUlEQVR4nO3diXaiMBSA4QJCUFxwQ63WurTavv8LDtSZozZxipiQE/p/D+Dh3hOTS8jy9AQAAAAAAAAAAAAAAAAAAAqT3uplPRwO1y+r3sT2w1g3679usiBMRRIWEpGGQbZ57f/WzMz6272fRN1Oy7vU6nSjxN9v+zPbD1i74aAtutfZuMpMV7QHS9sPWafVMUnim/n4Jw6Tzcr2o9ZkPfe7PybkpOtna9uPW4PlTgQlM1IIxK7pf6H+TtzuRNRaYte3/dgG9ab+vRn5yoo/7dl+dFM+xM8dq1qcfth+eCN6WVIxI4Uka2BTWST3dK2yQCxsh6DbMX0oI4V0YzsIrWbz9sMp8bx21qB6v/dZtkj7v/izMZ3KKHqsKzkLopHtYPQYJVWKErWWaERSRqG+lORJCRuQlF6kMyV5UiLn+5SZ19GaEi//PddHn6xqOX9bnNkO6jHvkfaUeF70bjusRywer15V0rHtwKp79o2kxPP8Z9uhVbbXVat9F+xth1bVW2goJZ4XvtkOrhpj/5yC72bpNjf1zykEc9vhVbEUBlPiecLF6XxPb03/XetgO8D7jc11sCehe0VKbLaZ5A0lth3ivRamm0neUFybtN6ZbiZ5Q9nZDvI+fTMvOtdSt76ZDvRPEcjige0w7zGpo5nkDcWlNV5jHZ9zftZ2aTg2WtafuVTgT0y+/V3y3fnzLM0XJyehOy8973WMOoXYnZlZw69/Zy3PdqhlPdczEhdSVyZma+tOHOpQtnpWVpTR3doOtqRpPdVJIZ7aDrakQ11drEOzbXVVbAXfdrDl1DjsODPwrMxO2F8TbuzcWNc3FOeDsRv7Nhb1TBSctN2YlK1p8uRvTtyYQhmbWIdzS0ROyEmDckJ/ImHckVGfyKhjZbzvKPBeLGP+RMY8m4z5WBnz9jK+7yjwHVDG92IZ6wpkrD9RYJ2SjPVsMtY9KrA+VsY6agXW28vYl6HA/h0Z+7wUDM+2OTPDdsnwvtHUnVedC+wvlpndh+7MZNI1zitQ4FwLGeefKJg6J8e5CvbSxsh5ShvbYT2Gc7dks4PufrZzcP18Ns7xU+G8RwWt54ImjUgJ58cqcc6wAudRq+g4t/xoOwjdlnddHSILnDx87Afcg6DywH0Zopn3ZTxxr4oa9++ocE+TCvd5qayOYbl7345u7LrQ5Ot+wNtH33d+3f2AJ8U9kuLmPZIvzarjy7t13+hvzccZ99ICAAAAAAAAAAAAAAAAACD7A+PaSTdtOrdEAAAAAElFTkSuQmCC"
+                        alt="">
+                    <h4 class="center"> Japan</h4>
+                </div>
+                <div class="col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_Australia_%28converted%2C_3-2%29.svg/1280px-Flag_of_Australia_%28converted%2C_3-2%29.svg.png"
+                        alt="">
+                    <h4 class="center"> Australia</h4>
+                </div>
+                <div class="col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/1200px-Flag_of_Pakistan.svg.png"
+                        alt="">
+                    <h4 class="center">Pakistan </h4>
+                </div>
+                <div class="col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png"
+                        alt="">
+                    <h4 class="center">China </h4>
+                </div>
+                <div class="col">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                        alt="">
+                    <h4 class="center"> India</h4>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container mt-5 show-off">
+                <div class="row justify-content-evenly bg-danger">
+                    <div class="col-3">
+                        <div class="row justify-content-center align-items-center ">
+                            <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                    fill="currentColor" class="bi bi-patch-check text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                    <path
+                                        d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z" />
+                                </svg></div>
+                            <div class="col pt-4  text-light">
+                                <h4>Lorem ipsum dolor sit </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 ">
+                        <div class="row justify-content-center align-items-center ">
+                            <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                    fill="currentColor" class="bi bi-shield-check text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                                    <path
+                                        d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                </svg></div>
+                            <div class="col pt-4  text-light">
+                                <h4>Lorem ipsum dolor sit </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 ">
+                        <div class="row justify-content-center align-items-center ">
+                            <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                    fill="currentColor" class="bi bi-globe-americas text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                                </svg></div>
+                            <div class="col pt-4  text-light">
+                                <h4>Lorem ipsum dolor sit </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo opti
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-dark text-light pb-5">
+                <div class="row justify-content-between ">
+                    <div class="col-3 mt-4">
+                        <h4 class="pb-3">Ways to shop</h4>
+                        <ul class="list-group ">
+                            <li>Featured Products</li>
+                            <li>Featured Shops</li>
+                            <li>Blogs</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-4">
+                        <h4 class="pb-3">Register</h4>
+                        <ul class="list-group ">
+                            <li>Become a seller</li>
+                            <li>Advertize with us</li>
+                            <li>Become an affiliate</li>
+                            <li>FAQS</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-4">
+                        <h4 class="pb-3">Quick Links</h4>
+                        <ul class="list-group ">
+                            <li>Contact Us</li>
+                            <li>Terms and Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>Code of Conduct</li>
+                            <li>Trade Finance Registration-Buyer</li>
+                            <li>Trade Finance Registration-Seller</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 mt-4 ">
+                        <h4 class="pb-3">Get in Touch</h4>
+                        <ul class="list-group ">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg> M,2020 Building Sheikh Zayed Road Al Quoz,Dubai,UAE</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-telephone text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg> 00971587654321</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-envelope text-light" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> support@meatodoor.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </div>
+
+</html>

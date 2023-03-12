@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(221, 223, 226);
+}
+
+.navbar {
+    position: fixed;
+}
+
+.nav1 {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+}
+
+.nav2 {
+    top: 5rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.navbar:first-child {
+    background-color: rgb(9, 15, 31);
+    padding: 1.2rem 4rem;
+}
+
+.brand-logo {
+    width: 200px;
+    margin-right: 1rem;
+}
+
+.bi {
+    color: red;
+    text-align: center;
+}
+
+.navbar-collapse {
+    margin-left: 20rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.heading {
+    margin-top: 9rem;
+}
+
+img {
+    margin-right: 0;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.quoatation {
+    background-image: url("https://thumbs.dreamstime.com/b/close-up-portrait-handsome-man-working-home-office-taking-reading-writing-notes-note-pad-laptop-computer-202854239.jpg");
+    background-size: cover;
+    overflow: hidden;
+    border-radius: .5rem;
+    opacity: .8;
+}
+
+.show-off .col-3 {
+    border-radius: .5rem;
+}
+
+.show-off .col:first-child {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.background {
+    background-image: url("https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg");
+    background-size: cover;
+    border-radius: .5rem;
+    opacity: .9;
+    width: 800px;
+    height: 400px;
+}
+
+.product img {
+    border: 1px solid grey;
+}
+
+ul li {
+    list-style-type: none;
+    padding: .5rem;
+}
+
+@media (max-width: 992px) {
+    .heading {
+        margin-top: 23rem;
+    }
+
+    .nav2 {
+        top: 7rem;
+    }
+
+    .col-2,
+    .col-6,
+    .col-3 {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 801px) {
+    .nav2 {
+        top: 10rem;
+    }
+
+    .heading {
+        margin-top: 25rem;
+    }
+}
